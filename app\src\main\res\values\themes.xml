@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MarioGame" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#00b894</item>
+        <item name="colorPrimaryDark">#00a381</item>
+        <item name="colorAccent">#e94560</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>
