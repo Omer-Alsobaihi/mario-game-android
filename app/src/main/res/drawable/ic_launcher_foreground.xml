@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#00b894"
+        android:pathData="M0,0h108v108h-108z"/>
+    
+    <!-- Mario-style character (simplified) -->
+    <!-- Hat -->
+    <path
+        android:fillColor="#e94560"
+        android:pathData="M30,40 L78,40 L78,50 L30,50 Z"/>
+    
+    <!-- Face -->
+    <path
+        android:fillColor="#ffeaa7"
+        android:pathData="M35,50 L73,50 L73,70 L35,70 Z"/>
+    
+    <!-- Eyes -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M45,55 L55,55 L55,62 L45,62 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M60,55 L70,55 L70,62 L60,62 Z"/>
+    
+    <!-- Mustache -->
+    <path
+        android:fillColor="#2d3436"
+        android:pathData="M40,65 L68,65 L68,68 L40,68 Z"/>
+    
+    <!-- Body -->
+    <path
+        android:fillColor="#00b894"
+        android:pathData="M35,70 L73,70 L73,95 L35,95 Z"/>
+    
+    <!-- Overall color -->
+    <path
+        android:fillColor="#00cec9"
+        android:pathData="M40,78 L68,78 L68,90 L40,90 Z"/>
+    
+</vector>
