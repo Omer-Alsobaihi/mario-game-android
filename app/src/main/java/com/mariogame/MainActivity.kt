@@ -94,7 +94,7 @@ class GameView(context: Context) : SurfaceView(context), SurfaceHolder.Callback 
                 canvas.drawText("Score: $score", 20f, 50f, paint)
                 if (gameOver) {
                     paint.textSize = 60f
-                    canvas.drawText("Game Over", canvas.width / 2 - 100, canvas.height / 2, paint)
+                    canvas.drawText("Game Over", (canvas.width / 2 - 100).toFloat(), (canvas.height / 2).toFloat(), paint)
                 }
             } finally {
                 holder.unlockCanvasAndPost(canvas)
