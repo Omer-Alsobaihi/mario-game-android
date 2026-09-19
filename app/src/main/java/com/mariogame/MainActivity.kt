@@ -82,4 +82,51 @@ class GameView(context: Context) : SurfaceView(context), SurfaceHolder.Callback 
     }
     
     private fun drawFrame() {
-        val canvas = h...[truncated]
+        val canvas = holder.lockCanvas()
+        if (canvas != null) {
+            try {
+                canvas.drawColor(Color.parseColor("#1a1a2e"))
+                paint.color = Color.parseColor("#00b894")
+                canvas.drawRect(0f, 550f, canvas.width.toFloat(), 600f, paint)
+                drawPlayer(canvas)
+                paint.color = Color.WHITE
+                paint.textSize = 40f
+                canvas.drawText("Score: $score", 20f, 50f, paint)
+                if (gameOver) {
+                    paint.textSize = 60f
+                    canvas.drawText("Game Over", canvas.width / 2 - 100, canvas.height / 2, paint)
+                }
+            } finally {
+                holder.unlockCanvasAndPost(canvas)
+            }
+        }
+        update()
+    }
+    
+    private fun update() {
+        if (gameOver) return
+        if (!onGround) {
+            velocityY += gravity
+        }
+        playerY += velocityY
+        if (playerY > 550f) {
+            playerY = 550f
+            onGround = true
+            velocityY = 0f
+        }
+        if (playerY > 600f) {
+            gameOver = true
+        }
+    }
+    
+    private fun drawPlayer(canvas: Canvas) {
+        val px = playerX
+        val py = playerY
+        paint.color = Color.parseColor("#00b894")
+        canvas.drawRect(px, py, px + playerW, py + playerH, paint)
+        paint.color = Color.parseColor("#ffeaa7")
+        canvas.drawRect(px + 10, py - 10, px + playerW - 10, py, paint)
+        paint.color = Color.parseColor("#e94560")
+        canvas.drawRect(px, py - 18, px + playerW, py - 10, paint)
+    }
+}
