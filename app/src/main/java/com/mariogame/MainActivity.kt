@@ -22,11 +22,11 @@ data class Player(
     var height: Float = 50f,
     var velocityX: Float = 0f,
     var velocityY: Float = 0f,
-    var isJumping = false,
-    var onGround = false,
-    var facingRight = true,
-    var lives = 3,
-    var score = 0
+    var isJumping: Boolean = false,
+    var onGround: Boolean = false,
+    var facingRight: Boolean = true,
+    var lives: Int = 3,
+    var score: Int = 0
 )
 
 data class Platform(
@@ -40,7 +40,7 @@ data class Coin(
     var x: Float,
     var y: Float,
     var radius: Float = 15f,
-    var collected = false,
+    var collected: Boolean = false,
     var bounceOffset: Float = 0f
 )
 
@@ -50,7 +50,7 @@ data class Enemy(
     var width: Float = 40f,
     var height: Float = 30f,
     var velocityX: Float = 2f,
-    var alive = true
+    var alive: Boolean = true
 )
 
 data class BackgroundStar(
